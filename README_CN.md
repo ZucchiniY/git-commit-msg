@@ -10,6 +10,10 @@
 [gitemoji](https://github.com/carloscuesta/gitmoji) 描述一些问题，也可
 以不使用，只是进行简单的描述。
 
+将项目下的 *.stCommitMsg* 文件放到 *commit.template* 定义的路径下，可
+以使用命令 `git config commit.template` 进行查询，然后将内容写入的项目
+中即可。
+
 ``` markdown
 #{ type } { 提交描述 }
 
