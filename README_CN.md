@@ -14,7 +14,7 @@
 以使用命令 `git config commit.template` 进行查询，然后将内容写入的项目
 中即可。
 
-``` markdown
+``` shell
 #{ type } { 提交描述 }
 
 #{ body } { 修改具体内容 }

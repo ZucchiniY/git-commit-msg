@@ -3,7 +3,7 @@
 Commit message use
 [gitemoji](https://github.com/carloscuesta/gitmoji).
 
-``` markdown
+``` shell 
 #{ type } { description }
 
 #{ body } { change log }
