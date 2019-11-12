@@ -1,15 +1,26 @@
-#{ type } { 提交描述 }
+# { type } { 提交描述 }
+:pencel: : 补充说明文档
 
-#{ body } { 修改具体内容 }
+# { body }
+# { 修改原因 }
+增加示例，在加载了默认的 Commit message 模板之后，应该在内容中填写什么内容。
 
-# :tada: 初始化项目
+# {footer}
+# { 更新的的文件，修复的问题 }
+modified : .stCommitMsg readme.md
+deleted : README_CN.md 
+
+# type 的内容
 # :sparkles: 新特性
 # :bug: 修改问题
 # :pencil: 编写文档
+# :wrench: 新增或者修改配置文档
 # :art: 调整代码格式和样式
 # :recycle: 重构代码
 # :white_check_mark: 更新测试
 # :lipstick: 更新 UI 和样式文件
+
+# :tada: 初始化项目
 # :children_crossing: 改善用户体验
 # :loud_sound: 增加日志
 # :mute: 移除日志
