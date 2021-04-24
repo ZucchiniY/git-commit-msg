@@ -1,0 +1,74 @@
+#+title: 配置 git commit template
+#+date: <2021-04-24 Sat>
+#+author: Dylan Yang
+
+在目录下，新建一个文件，命名为 *.stCommitMsg* ，其中的内容为：
+
+#+begin_src text
+  # {type}(影响范围): { 提交描述 }
+
+  # { body }
+  # { 修改原因 }
+
+  # {footer}
+  # { 更新的的文件，修复的问题 }
+
+  # type 的内容
+  # :sparkles: 新特性
+  # :bug: 修改问题
+  # :memo: 编写文档
+  # :wrench: 新增或者修改配置文档
+  # :art: 调整代码格式和样式
+  # :recycle: 重构代码
+  # :white_check_mark: 更新测试
+  # :lipstick: 更新 UI 和样式文件
+
+  # :tada: 初始化项目
+  # :children_crossing: 改善用户体验
+  # :loud_sound: 增加日志
+  # :mute: 移除日志
+  # :ok_hand: 代码审查通过
+  # :bento: 新增或修改资源
+  # :page_facing_up: 新增或者修改许可
+  # :construction_woker: 新增 CI 系统
+  # :heavy_plus_sign: 新增依赖
+  # :heavy_minux_sign: 移除依赖
+  # :arrow_down: 依赖降级
+  # :arrow_up: 依赖升级
+  # :bookmark: 发布版本标签
+  # :ambulance: 紧急修复
+  # :zap: 提升性能
+  # :hole: 修复漏洞问题
+#+end_src
+
+先查看是否已经设置了模板， =git config commit.template= 如果提示对应路径的位置则已经设置了，可以查看现有的文件。
+
+如果想覆盖现在的模板，则在命令行中输入命令以提交设置： =git config commit.template ./.stCommitMsg= ，如果想要设置全局的变量，则需要在命令中增加 =--global= ，即将命令改为 =git config commit.template ./.stCommitMsg --global= 。
+
+在模板文档中使用了 [[https://github.com/carloscuesta/gitmoji][gitemoji]] ，其中主要的设置如下：
+
+| 提交类型           | gitmoji                |
+|--------------------+------------------------|
+| 初始化项目         | =:tada:=               |
+| 新特性             | =:sparkles:=           |
+| 修改问题           | =:bug:=                |
+| 编写文档           | =:pencil:=             |
+| 调整代码格式和样式 | =:art:=                |
+| 重构代码           | =:recycle:=            |
+| 更新测试           | =:white_check_mark:=   |
+| 更新 UI 和样式文件 | =:lipstick:=           |
+| 改善用户体验       | =:children_crossing:=  |
+| 增加日志           | =:loud_sound:=         |
+| 移除日志           | =:mute:=               |
+| 代码审查通过       | =:ok_hand:=            |
+| 新增或修改资源     | =:bento:=              |
+| 新增或者修改许可   | =:page_facing_up:=     |
+| 新增 CI 系统       | =:construction_woker:= |
+| 新增依赖           | =:heavy_plus_sign:=    |
+| 移除依赖           | =:heavy_minux_sign:=   |
+| 依赖降级           | =:arrow_down:=         |
+| 依赖升级           | =:arrow_up:=           |
+| 发布版本标签       | =:bookmark:=           |
+| 紧急修复           | =:ambulance:=          |
+| 提升性能           | =:zap:=                |
+| 修复漏洞问题       | =:hole:=               |

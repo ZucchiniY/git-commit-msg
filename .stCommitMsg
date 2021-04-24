@@ -1,19 +1,15 @@
-# { type } { 提交描述 }
-:pencel: : 补充说明文档
+# {type}(影响范围): { 提交描述 }
 
 # { body }
 # { 修改原因 }
-增加示例，在加载了默认的 Commit message 模板之后，应该在内容中填写什么内容。
 
 # {footer}
 # { 更新的的文件，修复的问题 }
-modified : .stCommitMsg readme.md
-deleted : README_CN.md 
 
 # type 的内容
 # :sparkles: 新特性
 # :bug: 修改问题
-# :pencil: 编写文档
+# :memo: 编写文档
 # :wrench: 新增或者修改配置文档
 # :art: 调整代码格式和样式
 # :recycle: 重构代码
